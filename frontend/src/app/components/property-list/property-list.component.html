@@ -1,0 +1,10 @@
+<div class="property-list">
+  <h1>Property Listings</h1>
+  <div *ngFor="let property of properties" class="property-item">
+    <h2>{{ property.title }}</h2>
+    <p>{{ property.description }}</p>
+    <p>Price: {{ property.price | currency }}</p>
+    <p>Location: {{ property.location }}</p>
+    <button (click)="viewDetails(property.id)">View Details</button>
+  </div>
+</div>
